@@ -5,13 +5,15 @@ import SignUp from '../screens/SignUp_Screen/SignUpScreen';
 import ForgotPasswordScreen from '../screens/Login_Screen/ForgotPasswordScreen';
 import OTPScreen from '../screens/Login_Screen/OTPScreen';
 import NewPassword from '../screens/Login_Screen/NewPassword';
+import WelcomeScreen from '../screens/Login_Screen/WelcomeScreen';
 
 const RootStackScreen = () => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator
-      initialRouteName="Login"
+      initialRouteName="Welcome"
       screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
