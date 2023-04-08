@@ -73,7 +73,7 @@ const SignUp = ({navigation}) => {
             delay={2000}
             useNativeDriver={true}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Login')}>
+              onPress={() => navigation.navigate('Login')}>
               <LinearGradient
                 colors={[textColor, linearColor]}
                 style={styles.button}>
