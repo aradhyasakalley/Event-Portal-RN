@@ -8,7 +8,7 @@ const WelcomeScreen = () => {
         navigation.navigate('Login')
     }
     const onCreateNewPressed = () => {
-        navigation.navigate('SignUp')
+        navigation.navigate('RoleChoice')
     }
   return (
     <View style={styles.container}>
@@ -64,12 +64,12 @@ const styles = StyleSheet.create({
   },
   button: {
     borderColor: 'black',
-    backgroundColor: '#0DCDAA',
+    backgroundColor: '#CE7777',
     padding: 18,
     borderRadius: 10,
     alignItems: 'center',
     margin: 10,
-    width: 317,
+    width: 320,
     height: 66,
     marginBottom:11
   },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     padding: 18,
     borderRadius: 10,
     margin: 10,
-    width: 317,
+    width: 320,
     height: 66,
     flexDirection: 'row',
     justifyContent: 'center'
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     fontSize : 16
   },
   textlink: {
-    color: '#0DCDAA',
+    color: '#CE7777',
     fontSize : 16
   },
 });

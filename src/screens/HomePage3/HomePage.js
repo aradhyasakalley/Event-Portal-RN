@@ -81,12 +81,15 @@ export function HomePage() {
           isRetrying={isLoading}
         />
         <View style={styles.upperRow}>
-          <Text style={styles.title}>Hi, {currentUser.Name}</Text>
           <TouchableOpacity style={styles.profileImgContainer}>
             <Image source={image} style={styles.profileImg} />
           </TouchableOpacity>
+          <View style={styles.upperColumn}>
+            <Text style={styles.title}>Hi, {currentUser.Name}</Text>
+            <Text style={styles.subtitle}>{currentUser.Username}</Text>
+          </View>
         </View>
-        <Text style={styles.subtitle}>{currentUser.Username}</Text>
+
         <View style={styles.icon}>
           <SearchBar
             title={'Search for an event'}
@@ -125,20 +128,28 @@ const styles = StyleSheet.create({
     paddingRight: PixelRatio.get() * 9,
   },
   upperRow: {
+    marginTop:10,
     flexDirection: 'row',
-    alignContent: 'space-between',
+    alignContent: 'flex-end',
+    justifyContent: 'space-evenly',
+  },
+  upperColumn: {
+    flexDirection: 'column',
+    alignContent: 'flex-end',
+    justifyContent: 'space-evenly',
   },
   title: {
     fontFamily: 'OpenSans-Regular',
     paddingTop: heightToDp('4%'),
     color: subtextColor,
+    paddingRight: 90,
     fontSize: PixelRatio.getFontScale() * 25,
   },
   profileImgContainer: {
     height: heightToDp('10%'),
     width: widthToDp('10%'),
     borderRadius: 40,
-    paddingRight: widthToDp('5%'),
+    paddingRight: widthToDp('40%'),
     paddingLeft: widthToDp('15%'),
     paddingTop: heightToDp('3%'),
   },

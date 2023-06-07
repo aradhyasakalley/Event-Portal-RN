@@ -8,7 +8,7 @@ const TextField = (props) => {
     <TextInput
       style={styles.textinput}
       placeholder={props.title}
-      placeholderTextColor="rgba(255, 255, 255, 0.85)"
+      placeholderTextColor="gray"
       textAlign="left"
       onChangeText={props.function}
     />
@@ -18,10 +18,11 @@ const TextField = (props) => {
 const styles = StyleSheet.create({
   textinput: {
     fontFamily: 'OpenSans-Regular',
-    backgroundColor: backDropColor,
-    height: 47,
-    width: width * 0.9,
-    borderRadius: 40,
+    backgroundColor: 'white',
+    height: 56,
+    width: width * 0.81,
+    borderRadius: 10,
+    borderColor:'#ebe7e7',
     fontSize: 15,
     paddingLeft: 22,
     color: subtextColor,

@@ -4,10 +4,10 @@ const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
 const bgColor = '#1C2E4A';
-const textColor = '#F54B64';
-const statusbarColor = '#0C233D';
-const backDropColor = '#4E586E';
-const subtextColor = 'white';
+const textColor = 'black';
+const statusbarColor = '#DADADA80';
+const backDropColor = '#e6e6e6';
+const subtextColor = 'black';
 const linearColor = '#F78361';
 const baseURL = 'http://aryan123456.pythonanywhere.com/api';
 

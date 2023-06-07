@@ -12,8 +12,8 @@ const SearchBar = (props) => {
       <Icon
         name="search"
         style={styles.icon}
-        size={30}
-        color={'rgba(255, 255, 255, 0.54)'}
+        size={28}
+        color={'#BFB2B2'}
         onPress={() => getSearched(props.type, query, props.callback)}
       />
       <TextInput
@@ -24,7 +24,7 @@ const SearchBar = (props) => {
         }}
         onEndEditing={() => getSearched(props.type, query, props.callback)}
         onSubmitEditing={() => getSearched(props.type, query, props.callback)}
-        placeholderTextColor="rgba(255, 255, 255, 0.54)"
+        placeholderTextColor="#BFB2B2"
         style={{flex: 1, fontSize: 16, paddingLeft: 17, color: subtextColor}}
       />
     </View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   sectionStyle: {
     flexDirection: 'row',
     backgroundColor: backDropColor,
-    borderRadius: 100,
+    borderRadius: 8,
     width: '100%',
     height: 46,
   },

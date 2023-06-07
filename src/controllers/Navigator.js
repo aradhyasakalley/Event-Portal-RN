@@ -8,7 +8,8 @@ import {bgColor, textColor} from '../Constants';
 import MainTabScreen from '../controllers/MainTabScreen';
 import RootStackScreen from '../controllers/RootStackScreen';
 import EncryptedStorage from 'react-native-encrypted-storage';
-
+import UserTabNavigator from './UserTabNavigator';
+import AdminTabNavigator from './AdminTabNavigator';
 const Stack = createStackNavigator();
 
 const Navigator = () => {
@@ -60,7 +61,7 @@ const Navigator = () => {
     <NavigationContainer>
       {isSignedIn && currentUser ? (
         <Stack.Navigator headerMode="none" initialRouteName="MainTab">
-          <Stack.Screen component={MainTabScreen} name="MainTab" />
+          <Stack.Screen component={UserTabNavigator} name="UserTab" />
         </Stack.Navigator>
       ) : (
         <RootStackScreen />

@@ -10,6 +10,7 @@ import {
   ImageBackground,
   ToastAndroid,
   PixelRatio,
+  Image
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable';
@@ -115,7 +116,9 @@ const EventCard = ({
           source={image}
           style={{
             height: heightToDp('20'),
-            width: widthToDp('95'),
+            width: widthToDp('93'),
+             
+   
           }}>
           <View
             style={{
@@ -153,31 +156,25 @@ const EventCard = ({
       </TouchableOpacity>
       <View style={styles.info}>
         <TouchableOpacity>
-          <Text style={styles.know}>KNOW MORE</Text>
+          <Text style={styles.know}>View</Text>
         </TouchableOpacity>
         <View
           style={{
             flexDirection: 'row',
             width: PixelRatio.getFontScale() * 100,
             justifyContent: 'space-around',
+            
           }}>
           <FontAwesome
             name={didLike ? 'heart' : 'heart-o'}
             color={didLike ? textColor : subtextColor}
             onPress={LikeHandler}
-            size={20}
+            size={25}
           />
-          {/* <MaterialCommunityIcons
-            name={notify ? 'bell-ring' : 'bell'}
-            color={subtextColor}
-            onPress={() => {
-              notify ? setNotify(false) : setNotify(true);
-            }}
-            size={20}
-          /> */}
+         
           <FontAwesome
             name="share-alt"
-            size={20}
+            size={25}
             color={subtextColor}
             onPress={onShare}
           />
@@ -192,7 +189,10 @@ const styles = StyleSheet.create({
     height: heightToDp('30'),
     width: widthToDp('95'),
     marginLeft: 0,
-    backgroundColor: backDropColor,
+    padding:5,
+    marginRight:40,
+    borderRadius:30,
+    backgroundColor: 'red',
   },
   text: {
     paddingLeft: 15,
@@ -212,8 +212,11 @@ const styles = StyleSheet.create({
   info: {
     flexDirection: 'row',
     paddingTop: PixelRatio.getFontScale() * 14,
+
     paddingHorizontal: widthToDp('4'),
+    
     justifyContent: 'space-between',
+
   },
   know: {
     color: textColor,
